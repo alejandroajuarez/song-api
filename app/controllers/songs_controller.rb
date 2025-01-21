@@ -22,4 +22,13 @@ class SongsController < ApplicationController
     @song.save
     render :show
   end
+
+  def update
+    @song = Song.find_by(id: params[:id])
+    @song.title = params[:title]
+    @song.album = params[:album]
+    @song.artist = params[:artist]
+    @song.year = params[:year]
+    render :show
+  end
 end
