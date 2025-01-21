@@ -14,10 +14,10 @@ class SongsController < ApplicationController
 
   def create
     @song = Song.new(
-      title: params[:input_title],
-      album: params[:input_album],
+      title:  params[:input_title],
+      album:  params[:input_album],
       artist: params[:input_artist],
-      year: params[:input_year]
+      year:   params[:input_year]
     )
     @song.save
     render :show
